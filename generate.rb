@@ -7,11 +7,9 @@ require './nametag_pdf'
 # Load CSV file with attendees
 attendees = []
 
-CSV.foreach('attendees.csv', headers: true, header_converters: :symbol, converters: :all) do |row|
-  attendees.push [row.fields[0], row.fields[1], row.fields[2], row.fields[3], row.fields[4]]
+CSV.foreach('attendees.csv', col_sep: ';', headers: true, header_converters: :symbol, converters: :all) do |row|
+  attendees.push [row.fields[1], row.fields[2], row.fields[3], row.fields[4], row.fields[5]]
 end
-
-puts attendees
 
 # Create PDF
 pdf = NametagPdf.new(attendees)

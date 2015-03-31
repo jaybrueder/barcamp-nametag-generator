@@ -18,12 +18,15 @@ class NametagPdf < Prawn::Document
 
     # Add a page to the PDF for each attendee
     attendees.each do |attendee|
+
+      puts "#{attendee[0]} - #{attendee[1]} - #{attendee[2]} - #{attendee[3]} - #{attendee[4]}"
+
       firstname(attendee[0])
       lastname(attendee[1]) if attendee[1]
 
-      tag1(attendee[2])
-      tag2(attendee[3])
-      tag3(attendee[4])
+      tag1(attendee[2]) if attendee[2]
+      tag2(attendee[3]) if attendee[3]
+      tag3(attendee[4]) if attendee[4]
 
       start_new_page
     end

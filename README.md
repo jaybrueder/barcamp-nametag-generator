@@ -39,13 +39,12 @@ ruby generate.rb
 ## Example CSV
 
 ```csv
-Firstname,Lastname,Tag1,Tag2,Tag3
-Jürgen,Bröder,Webdesign,Photoshop,Beer
-Andrea,Parvilion,UXCamp,UX,Camp
-Max,Mustermann,Web-Development,Android,Whisky
-Sting,,Tag1,Tag2,Tag3
+id;firstName;lastName;tag1;tag2;tag3
+1;Jürgen;Bröder;Webdesign;Photoshop;Beer
+2;Andrea;Parvilion;UXCamp;UX;Camp
+3;Max;Mustermann;Web-Development;Android;Whisky
+4;Sting;;Tag1;Tag2;Tag3
 ```
-
 
 ## Authors #
 
